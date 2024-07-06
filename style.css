@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+  --bg-color: #121214;
+  --primary: #2087ed;
+  --text: #FFFFFF;
+  --card: #2D2D32;
+  --progress: #4CAF82;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text);
+  margin: 0;
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    
+    .dashboard-section {
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+
+      h2 {
+        background-color: var(--primary);
+        padding: 1rem;
+        border-radius: .75rem;
+        margin: 0 0 1rem 0;
+      }
+    
+      .card {
+        background-color: var(--card);
+        border-radius: .75rem;
+        padding: 0 1.5rem;
+        
+        .progress-bar {
+          background-color: var(--bg-color);
+          border-radius: .25rem;
+          overflow: hidden;
+        
+          div {
+            height: 1.5rem;
+            background-color: var(--progress);
+          }
+        }
+      }
+    }
+  }
+}
